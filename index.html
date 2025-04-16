@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health Detection</title>
+</head>
+<body>
+
+    <h1>Mental Health Classifier</h1>
+    <form method="POST" action="/predict">
+        <textarea name="text" placeholder="Enter your message here..." required></textarea><br>
+        <button class="btn" type="submit">Check</button>
+    </form>
+
+    {% if prediction %}
+        <div class="{{ 'alert' if prediction == 'suicide' else 'safe' }}">
+            <h2>Prediction: {{ prediction }}</h2>
+        </div>
+    {% endif %}
+
+    {% if risk == 'high' %}
+        <div class="precaution-box">
+            <p>🚨 High Risk Detected!</p>
+            <p>Emergency help is being contacted via SMS and call.</p>
+            <p>Please consider speaking to a mental health professional. You're not alone ❤️</p>
+            <a href="/help" target="_blank">
+                <button class="btn" style="background-color:red; color:white;">Get Help</button>
+            </a>
+            
+        </div>
+    {% endif %}
+
+</body>
+</html>
+

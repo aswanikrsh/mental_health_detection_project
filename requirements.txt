@@ -1,0 +1,5 @@
+flask
+twilio
+pandas
+scikit-learn
+nltk
