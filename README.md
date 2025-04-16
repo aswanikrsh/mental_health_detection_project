@@ -35,7 +35,7 @@ This project is a web-based application that detects potential suicidal intent i
 
 ## 📊 Dataset
 
-- **Source**: [Custom or Kaggle-based dataset]
+- **Source**: [Kaggle Suicide Watch Dataset](https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch)
 - **Total entries**: ~23,000 messages
 - **Classes**: `suicide`, `non-suicide`
 - **Features**: Raw text data
